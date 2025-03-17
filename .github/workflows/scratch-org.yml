@@ -18,6 +18,7 @@ jobs:
 
       - name: Authenticate DevHub
         run: |
+          echo $SFDX_AUTH_URL
           echo "$SFDX_AUTH_URL" > authfile.json
           sfdx force:auth:sfdxurl:store -f authfile.json -a DevHub -d
 
