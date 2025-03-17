@@ -26,7 +26,7 @@ jobs:
           echo "$SFDX_AUTH_URL"  # This should also print it
       
           echo "Saving SFDX_AUTH_URL to file..."
-          echo "$SFDX_AUTH_URL" > authfile.json
+          echo "${{ secrets.SFDX_AUTH_URL }}" > authfile.json
       
           cat authfile.json  # Check if the file is created
       
