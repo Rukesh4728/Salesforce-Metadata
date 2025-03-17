@@ -18,14 +18,7 @@ jobs:
 
       - name: Authenticate DevHub
         run: |
-          echo "Checking environment variables..."
-          env  # Lists all environment variables (for debugging)
           
-          echo "Printing SFDX_AUTH_URL..."
-          echo "${{ secrets.SFDX_AUTH_URL }}" # This should print the value
-          echo "$SFDX_AUTH_URL"  # This should also print it
-      
-          echo "Saving SFDX_AUTH_URL to file..."
           echo "${{ secrets.SFDX_AUTH_URL }}" > authfile.json
       
           cat authfile.json  # Check if the file is created
