@@ -26,4 +26,5 @@ jobs:
 
       - name: Create Scratch Org
         run: |
-          sfdx force:org:create -f config/project-scratch-def.json -d 1 -s -a MyScratchOrg
+          sfdx force:config:set defaultdevhubusername=DevHub
+          sfdx force:org:create -f config/project-scratch-def.json -a MyScratchOrg -d 1
