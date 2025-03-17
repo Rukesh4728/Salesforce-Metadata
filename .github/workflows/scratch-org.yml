@@ -19,7 +19,7 @@ jobs:
       - name: Authenticate DevHub
         run: |
           echo "$SFDX_AUTH_URL" > authfile.json
-          sfdx auth:sfdxurl:store --sfdx-url-file authfile.json --set-default-dev-hub --alias DevHub
+          sfdx force:auth:sfdxurl:store -f authfile.json -a DevHub -d
 
         env:
           SFDX_AUTH_URL: ${{ secrets.SFDX_AUTH_URL }}
